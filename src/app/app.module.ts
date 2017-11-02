@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { MenuComponent } from './menu/menu.component';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 
 
 
@@ -18,7 +19,8 @@ import { MenuComponent } from './menu/menu.component';
     MainComponent,
     CartComponent,
     ProductsComponent,
-    MenuComponent],
+    MenuComponent,
+    LoginDialogComponent],
   imports: [
     BrowserModule,
     FormsModule,

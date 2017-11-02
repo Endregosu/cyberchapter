@@ -1,1 +1,48 @@
 <app-menu></app-menu>
+<button type="button" (click)="modal1.show()">test</button>
+
+
+<!--Login dialog -->
+<login-dialog #modal1>
+  <div class="app-modal-header">
+    <h2>Bejelentkezés</h2>
+  </div>
+  <div class="app-modal-body">
+      <div class="inputholder col-md-6 col-md-offset-3">
+            <input id="username" type="text" placeholder="Felhasználónév">
+      </div>
+      <div class="inputholder col-md-6 col-md-offset-3">
+            <input id="password" type="password" placeholder="Jelszó">
+      </div>
+      <div class="inputholder col-md-6 col-md-offset-3">
+            <input id="login" class="login-btn" type="button" value="Bejelentkezés">
+      </div>
+  </div>
+</login-dialog>
+
+<login-dialog #modal2>
+  <div class="app-modal-header">
+    header
+  </div>
+  <div class="app-modal-body">
+    Modal 2
+  </div>
+  <div class="app-modal-footer">
+     <button type="button" class="btn btn-default" (click)="modal2.hide()">Close</button>
+    <button type="button" class="btn btn-default" (click)="modal3.show()">Show modal 3</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>
+</login-dialog>
+
+<login-dialog #modal3>
+  <div class="app-modal-header">
+    header
+  </div>
+  <div class="app-modal-body">
+    Modal 3
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default" (click)="modal3.hide()">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>
+</login-dialog>

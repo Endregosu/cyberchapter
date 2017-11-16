@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routes } from './app.router';
+import { CurrencyPipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -13,6 +14,7 @@ import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +22,14 @@ import { LoginDialogComponent } from './login-dialog/login-dialog.component';
     CartComponent,
     ProductsComponent,
     MenuComponent,
-    LoginDialogComponent],
+    LoginDialogComponent,
+    CartComponent],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routes
+    routes,
+
   ],
   providers: [
 ],

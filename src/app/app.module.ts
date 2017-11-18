@@ -12,6 +12,9 @@ import { ProductsComponent } from './products/products.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+
+//import {WebStorageModule, LocalStorageService} from "angular2-localstorage";
 
 
 
@@ -25,15 +28,18 @@ import { FooterComponent } from './footer/footer.component';
     MenuComponent,
     LoginDialogComponent,
     CartComponent,
-    FooterComponent],
+    FooterComponent,
+    HeaderComponent],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routes,
+ //   WebStorageModule
 
   ],
   providers: [
+  //  LocalStorageService
 ],
   bootstrap: [AppComponent]
 })

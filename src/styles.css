@@ -46,3 +46,7 @@
     background-image: linear-gradient(to bottom, #f59978, #eb7e57);
     text-decoration: none;
   }
+
+  .navbar{
+      margin-bottom: 0 !important;
+  }

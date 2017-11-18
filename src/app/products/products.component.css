@@ -6,6 +6,10 @@
     margin: auto;
 }
 
+.bookItem{
+    margin-bottom: 100px !important;
+}
+
 .bookItem:before{
     font-family: FontAwesome;
     color: #e95420;

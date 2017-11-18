@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -23,7 +24,8 @@ import { LoginDialogComponent } from './login-dialog/login-dialog.component';
     ProductsComponent,
     MenuComponent,
     LoginDialogComponent,
-    CartComponent],
+    CartComponent,
+    FooterComponent],
   imports: [
     BrowserModule,
     FormsModule,

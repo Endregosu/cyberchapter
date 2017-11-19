@@ -1,0 +1,22 @@
+
+
+
+<div class="container">
+<h3 class="alreadylogged" *ngIf="localStorageItem(currentUser) != ''">Már be vagy jelentkezve {{ localStorageItem(currentUser) }} fiókjával :)</h3>
+  <form *ngElse  (submit)="loginUser($event)">
+      <div class="app-modal-header">
+      <h2>Bejelentkezés</h2>
+      </div>
+      <div class="app-modal-body">
+            <div class="inputholder col-md-6 col-md-offset-3">
+                  <input id="username" type="text" placeholder="Felhasználónév">
+            </div>
+            <div class="inputholder col-md-6 col-md-offset-3">
+                  <input id="password" type="password" placeholder="Jelszó">
+            </div>
+            <div class="inputholder col-md-6 col-md-offset-3">
+                  <input id="login" class="login-btn" type="submit" value="Bejelentkezés">
+            </div>
+      </div>
+  </form>
+</div>

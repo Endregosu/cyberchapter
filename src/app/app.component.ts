@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
    templateUrl: 'app.component.html'
 })
 
-export class AppComponent { }
+export class AppComponent {
+    public localStorageItem(id: string): string {
+        console.log(localStorage.getItem('currentUser'));
+        return localStorage.getItem('currentUser');
+      }
+ }

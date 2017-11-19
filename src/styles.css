@@ -50,3 +50,8 @@
   .navbar{
       margin-bottom: 0 !important;
   }
+
+  html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}

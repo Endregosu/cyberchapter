@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'app/user.service';
+import { LocalstorageService } from 'app/localstorage.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private user : UserService, private storageservice : LocalstorageService) {
+
+   }
 
   ngOnInit() {
+
   }
 
 }

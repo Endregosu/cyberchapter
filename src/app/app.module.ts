@@ -12,10 +12,12 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { UserService } from 'app/user.service';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { LocalstorageService } from './localstorage.service';
+import { LocalstorageService } from './services/localstorage.service';
+import { MainComponent } from './main/main.component';
+import { UserService } from 'app/services/user.service';
+import { SubmenuComponent } from './submenu/submenu.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { LocalstorageService } from './localstorage.service';
     FooterComponent,
     HeaderComponent,
     CheckoutComponent,
-    LoginPageComponent],
+    LoginPageComponent,
+    MainComponent,
+    SubmenuComponent],
   imports: [
     BrowserModule,
     FormsModule,

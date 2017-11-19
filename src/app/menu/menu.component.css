@@ -6,3 +6,6 @@
 #navbar-main{
     width: 101.3%;
 }
+#logout{
+    cursor: pointer;
+}

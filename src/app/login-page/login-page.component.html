@@ -2,8 +2,8 @@
 
 
 <div class="container">
-<h3 class="alreadylogged" *ngIf="localStorageItem(currentUser) != ''">Már be vagy jelentkezve {{ localStorageItem(currentUser) }} fiókjával :)</h3>
-  <form *ngElse  (submit)="loginUser($event)">
+<h3 class="alreadylogged" *ngIf="this.storageservice.localStorageItem('currentUser') != '' && this.storageservice.localStorageItem('currentUser') != null">Már be vagy jelentkezve {{ localStorageItem(currentUser) }} fiókjával :)</h3>
+  <form *ngIf="this.storageservice.localStorageItem('currentUser') == '' || this.storageservice.localStorageItem('currentUser') == null" (submit)="loginUser($event)">
       <div class="app-modal-header">
       <h2>Bejelentkezés</h2>
       </div>

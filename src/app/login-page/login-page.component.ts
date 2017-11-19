@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'app/user.service';
-import { LocalstorageService } from 'app/localstorage.service';
+import { UserService } from 'app/services/user.service';
+import { LocalstorageService } from 'app/services/localstorage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -9,7 +10,7 @@ import { LocalstorageService } from 'app/localstorage.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private user: UserService) { }
+  constructor(private router :Router, private user: UserService, private storageservice : LocalstorageService) { }
 
   ngOnInit() {
   }
@@ -20,13 +21,12 @@ export class LoginPageComponent implements OnInit {
     var password = e.target.elements[1].value;
 
     if(username ==  'admin' && password == 'admin'){
-      this.user.setUserLoggedIn(true);
+        this.user.setUserLoggedIn(true);
+        this.user.setUserName(username);
         localStorage.setItem('currentUser', username);
+        this.router.navigate(['products']);
+       } else {
+      alert("Helytelen felhasználónév / Jelszó :(")
     }
   }
-
-  public localStorageItem(id: string): string {
-    return localStorage.getItem('currentUser');
-  }
-
 }

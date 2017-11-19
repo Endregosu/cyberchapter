@@ -15,9 +15,10 @@
           <li>
             <a routerLink="checkout">Kassza</a>
           </li>
-          <li>
-            <a *ngIf="storageservice.localStorageItem(currentUser) != ''" routerLink="loginpage" (onclick)="setUserLoggedIn(false)">Kijelentkezés</a>
-            <a *ngElse routerLink="loginpage" >Bejelentkezés</a>
+          <li id="logout">
+            <a *ngIf="this.storageservice.localStorageItem('currentUser') != '' && this.storageservice.localStorageItem('currentUser') != null"  (click)=this.user.setUserLoggedIn(false)>Kijelentkezés</a>
+            <a *ngIf="this.storageservice.localStorageItem('currentUser') == '' || this.storageservice.localStorageItem('currentUser') == null" routerLink="loginpage" >Bejelentkezés</a>
+
           </li>
 
         </ul>
@@ -25,5 +26,5 @@
       </div>
     </div>
   </div>
-  
+  <app-submenu></app-submenu>
   <router-outlet></router-outlet>

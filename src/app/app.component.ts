@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
     public localStorageItem(id: string): string {
-        console.log(localStorage.getItem('currentUser'));
         return localStorage.getItem('currentUser');
-      }
+    }
  }

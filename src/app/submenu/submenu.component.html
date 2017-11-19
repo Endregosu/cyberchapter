@@ -1,0 +1,7 @@
+<div id="info-holder">
+  <div class="container">
+    <i class="fa fa-user-o" id="icon-holder" aria-hidden="true"></i>  
+    <h5 id="user" *ngIf=this.user.getUserLoggedIn()>Bejelentkezve mint : {{ this.user.getUserName() }}</h5>
+    <h5 id="user" *ngIf=!(this.user.getUserLoggedIn())>Még nem jelentkeztél be</h5>
+  </div>
+</div>

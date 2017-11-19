@@ -1,0 +1,18 @@
+#info-holder{
+    background-color: #505050;
+    margin: 0;
+    height: 35px;
+    color: white;
+}
+
+#user{
+    display: inline-block;
+    margin-left: 1%;
+}
+.container{
+    width: 57.5%;
+}
+
+#icon-holder{
+    height: 100%;
+}

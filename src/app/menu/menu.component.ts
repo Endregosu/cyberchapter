@@ -10,7 +10,7 @@ import { LocalstorageService } from 'app/services/localstorage.service';
 export class MenuComponent implements OnInit {
 
   constructor(private user : UserService, private storageservice : LocalstorageService) {
-        console.log(user.getUserLoggedIn());
+
    }
 
   ngOnInit() {

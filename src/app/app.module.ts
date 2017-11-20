@@ -18,6 +18,7 @@ import { LocalstorageService } from './services/localstorage.service';
 import { MainComponent } from './main/main.component';
 import { UserService } from 'app/services/user.service';
 import { SubmenuComponent } from './submenu/submenu.component';
+import { CartService } from 'app/services/cart.service';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { SubmenuComponent } from './submenu/submenu.component';
   ],
   providers: [
     UserService,
-    LocalstorageService
+    LocalstorageService,
+    CartService
 ],
   bootstrap: [AppComponent]
 })

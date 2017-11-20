@@ -9,9 +9,9 @@
   <ul>
     <div class="row">
 
-        <li class="bookItem col-md-3" *ngFor="let book of bookList" (click)="addToCart(book)">
+        <li class="bookItem col-md-3" *ngFor="let book of books" (click)="addToCart(book)">
             <img class="coverphoto" src={{book.image}} /> 
-            <h2>{{ book.name }}</h2>
+            <h2>{{ book.title }}</h2>
             <h3>{{ book.description }}</h3>
             <p class="price"> {{ book.price |  currency:'HUF':'code'}}</p>
         </li>

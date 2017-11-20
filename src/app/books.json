@@ -1,0 +1,14 @@
+[
+    {"id": 1, "title": "Hidegen hagy", "description": "A book about hidegen hagyás", "price": 4200, "image": "./images/hidegenhagy.jpg"},
+    {"id": 2, "title": "Nyugtalanság", "description": "A book about nyugtalanság" , "price": 4000, "image": "./images/nyugtalansag.jpg"},
+    {"id": 3, "title": "Padtárskereső", "description": "A book about padtárskeresés", "price": 5000, "image": "./images/padtarskereso.jpg"},
+    {"id": 4, "title": "Aki bújt...", "description": "A book about bújócska", "price": 3000, "image": "./images/akibujt.jpg"},
+    {"id": 5, "title": "Lány a jég alatt", "description": "A book about a lány a jég alatt", "price": 1500, "image": "./images/lanyajegalatt.jpg"},
+    {"id": 6, "title": "Megúszós kaják", "description": "A book about megúszós kaják", "price": 2500, "image": "./images/meguszoskajak.jpg"},
+    {"id": 7, "title": "A macskaherceg", "description": "A book about macskaherceg", "price": 3000, "image": "./images/amacskaherceg.jpg"},
+    {"id": 8, "title": "A négy madár titka", "description": "A book about négy madár", "price": 4000, "image": "./images/anegymadar.jpg"},
+    {"id": 9, "title": "Gesta hungarorum", "description": "A book about hungarorum", "price": 5000, "image": "./images/gestahungarorum.jpg"},
+    {"id": 10, "title": "Rád hangolva", "description": "A book about rád hangolva", "price": 3000, "image": "./images/radhangolva.jpg"},
+    {"id": 11, "title": "Evelyn két férje", "description": "A book about evelyn", "price": 3500, "image": "./images/evelin.jpg"},
+    {"id": 12, "title": "Guiness rekordok könyve - 2018", "description": "A book about records", "price": 2500, "image": "./images/guiness.jpg"}
+]

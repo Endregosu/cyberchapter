@@ -12,7 +12,7 @@ export const router: Routes = [
     { path: '', redirectTo: 'products', pathMatch: 'full' },
     { path: 'cart', component: CartComponent },
     { path: 'main', component: MainComponent },
-    { path: 'products', component: ProductsComponent },
+    { path: 'products', component:  ProductsComponent },
     { path: 'loginpage', component: LoginPageComponent },
     { path: 'cart', component: CartComponent },
  

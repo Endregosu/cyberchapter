@@ -13,7 +13,7 @@
             <img class="coverphoto" src={{book.image}} /> 
             <h2>{{ book.title }}</h2>
             <h3>{{ book.description }}</h3>
-            <p class="price"> {{ book.price |  currency:'HUF':'code'}}</p>
+            <p class="price"> {{ book.price | forint }}</p>
         </li>
     </div>
   </ul>

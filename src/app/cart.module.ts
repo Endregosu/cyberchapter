@@ -6,49 +6,33 @@ import { routes } from './app.router';
 import { CurrencyPipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { LocalstorageService } from './services/localstorage.service';
-import { MainComponent } from './main/main.component';
 import { UserService } from 'app/services/user.service';
 import { SubmenuComponent } from './submenu/submenu.component';
 import { CartService } from 'app/services/cart.service';
-
-import { CartModule } from 'app/cart/cart.module';
-
-import { HighLighter } from 'app/app.highlighter';
-import { ProductsModule } from 'app/products/products.module';
-import { FooterMenuComponent } from 'app/footermenu/menu.component';
+import { CartComponent } from 'app/cart/cart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HeaderComponent,
-    LoginPageComponent,
-    MainComponent,
-    SubmenuComponent,
+    CartComponent,
     FooterComponent,
-    HighLighter,
-    FooterMenuComponent
-  ],
-
+    SubmenuComponent],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routes,
-    CartModule,
-    ProductsModule
+    routes
 
   ],
   providers: [
     UserService,
-    LocalstorageService
+    CartService
 ],
   bootstrap: [AppComponent]
 })

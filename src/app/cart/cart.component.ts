@@ -1,6 +1,7 @@
 import { Component, OnInit, KeyValueDiffers, Input, IterableDiffers } from '@angular/core';
 import { CartService } from 'app/services/cart.service';
 import { Router } from '@angular/router/src/router';
+import { UserService } from 'app/services/user.service';
 
 @Component({
   selector: 'app-cart',
@@ -17,7 +18,7 @@ export class CartComponent implements OnInit {
   differ: any;
 
 
-  constructor(private cartservice : CartService, differs: IterableDiffers, private router : Router) {
+  constructor(private cartservice : CartService, differs: IterableDiffers, private router : Router, private user : UserService) {
     this.differ = differs.find([]).create(null);
   }
 
@@ -28,7 +29,7 @@ export class CartComponent implements OnInit {
     this.books = this.cartservice.getItems();
   }
 
-  ngDoCheck() {
+  ngDoCheck(){
     const change = this.differ.diff(this.books);
       for(let book of this.books){
         for (var i = 0; i < this.booksInShop.length; i++) {
@@ -49,6 +50,19 @@ export class CartComponent implements OnInit {
     if (index !== -1) {
         this.books.splice(index, 1);
     }    
+  }
+
+  toProducts() {
+    this.router.navigate(['./products']);
+  }
+
+  checkout(){
+    console.log(this.user.getUserLoggedIn());
+      if(this.user.getUserLoggedIn){
+        alert("Haver... nem is vagy bejelentkezve");
+      } else {
+        alert("Küldöm a cuccot!");
+      }
   }
 
 }

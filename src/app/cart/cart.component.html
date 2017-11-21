@@ -13,6 +13,12 @@
           <h2 *ngIf="sumvalue != 0" class="col-md-5 summary">{{ sumvalue | currency:'HUF':'code' }}</h2>
       </div>
     </ul>
+    <div class="col-md-6 button-holder" (click)="toProducts()">
+        <h4>Vissza a termékekhez</h4>
+     </div>
+    <div class="col-md-6 button-holder" (click)="checkout()">
+        <h4>Megrendelem</h4>
+    </div>
   </div>
 </div>
 

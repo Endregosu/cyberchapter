@@ -12,7 +12,6 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LocalstorageService } from './services/localstorage.service';
 import { MainComponent } from './main/main.component';
@@ -31,7 +30,6 @@ import { CartService } from 'app/services/cart.service';
     CartComponent,
     FooterComponent,
     HeaderComponent,
-    CheckoutComponent,
     LoginPageComponent,
     MainComponent,
     SubmenuComponent],

@@ -12,9 +12,6 @@
           <li>
             <a routerLink="cart">Kosár</a>
           </li>
-          <li>
-            <a routerLink="checkout">Kassza</a>
-          </li>
           <li id="logout">
             <a *ngIf="this.storageservice.localStorageItem('currentUser') != '' && this.storageservice.localStorageItem('currentUser') != null"  (click)=this.user.setUserLoggedIn(false)>Kijelentkezés</a>
             <a *ngIf="this.storageservice.localStorageItem('currentUser') == '' || this.storageservice.localStorageItem('currentUser') == null" routerLink="loginpage" >Bejelentkezés</a>

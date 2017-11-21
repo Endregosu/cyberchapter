@@ -16,7 +16,7 @@ export const router: Routes = [
     { path: 'products', component: ProductsComponent },
     { path: 'checkout', component: CheckoutComponent },
     { path: 'loginpage', component: LoginPageComponent },
-    { path: 'cart', component: CartComponent }
+    { path: 'cart', component: CartComponent },
  
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

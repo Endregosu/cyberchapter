@@ -20,11 +20,7 @@ export class ProductsComponent implements OnInit {
     .subscribe(resBooksData => this.books = resBooksData);
   }
 
-  getAvailableBooks(){
-    console.log(this.books);
-  }
-
-  addToCart(book){
+   addToCart(book){
     this.cartservice.addItem(book.id);
     alert(book.name + " máris a kosaradban van köcsög!");
   }

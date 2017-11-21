@@ -15,7 +15,7 @@ export class CartService {
   getItems(){
     return this.items;
   }
-
+ 
   getBooksFromServer(){
     return this._http.get(this.books)
        .map((response:Response) => response.json());

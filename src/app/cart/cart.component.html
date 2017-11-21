@@ -1,3 +1,22 @@
-<p>
-  cart works!
-</p>
+<div class="container" *ngIf="books != ''">
+  <h2 id="title">Kosarad tartalma: </h2>
+  <div id="cartTable" class="col-md-6 col-xs-offset-3">
+    <ul id="cartul" class="col-md-12">  
+      <li class="row bookItem" *ngFor="let book of bookListWithDetails">
+            <img class="col-md-2 coverphoto" src={{book.image}} /> 
+            <h2 class="col-md-5 booktitle">{{ book.title }}</h2>
+            <p class="col-md-3 price"> {{ book.price |  currency:'HUF':'code'}}</p>
+            <div class="col-md-2 iconholder"><i class="fa fa-trash-o" aria-hidden="true" (click)="deleteItem(book.id)"></i></div>
+      </li>
+      <div class="sumholder">
+          <h2 *ngIf="sumvalue != 0" class="col-md-5 sumtext">Összesen: </h2>
+          <h2 *ngIf="sumvalue != 0" class="col-md-5 summary">{{ sumvalue | currency:'HUF':'code' }}</h2>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<div class="container" *ngIf="books == ''">
+    <h2 id="emptytitle">A kosarad még üres :(</h2>
+    <div class="imgholder md-col-12"><img id="emptycatimg" src="./images/sad_cart.png"></div>
+</div>

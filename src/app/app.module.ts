@@ -21,7 +21,7 @@ import { CartModule } from 'app/cart/cart.module';
 
 import { HighLighter } from 'app/app.highlighter';
 import { ProductsModule } from 'app/products/products.module';
-import { FooterMenuComponent } from 'app/footermenu/menu.component';
+import { FooterMenuComponent } from 'app/footermenu/footermenu.component';
 
 
 @NgModule({

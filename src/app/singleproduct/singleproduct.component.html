@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 id="detailstitle" >A könyv részletes leírása</h2>
+    <div class="row">
+        <div class="imgholder col-md-5">
+              <img src="{{image}}">
+        </div>
+        <div class="detailsholder col-md-7">
+            <h3 id="booktitle" >{{ title }}</h3>
+            <p id="bookdescription" > {{ description }}</p>
+            <p id="booksprice" > A könyv jelenlegi ára: {{ price | forint }}</p>
+            <div class="col-md-6 button-holder" (click)="addToCartById( id )">
+                    <h4>Kosárba vele</h4>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.row{
+    margin: 0 2% 10% 2%;
+}
+#detailstitle{
+    margin: 3% 3%;
+}
+.button-holder{
+    text-align: center;
+    color: #f59978;
+    border: 2px solid #f59978;
+    cursor: pointer;
+    transition: .15s ease-in-out;
+}
+
+.button-holder:hover{
+    background-color: #f59978;
+    color: white;
+}
+
+#booksprice{
+    font-size: 20px;
+}

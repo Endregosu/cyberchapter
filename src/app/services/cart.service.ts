@@ -24,6 +24,10 @@ export class CartService {
   getNumberOfItems(){
     return this.numberOfItems;
   }
+  setNumberOfItems( items : number ){
+    this.numberOfItems = items;
+  }
+
 
   addItem(bookId : number){
       //put it in cart
@@ -31,6 +35,7 @@ export class CartService {
 
       //lets incarse the number of items in cart
       this.numberOfItems ++;
+      console.log(this.items);
   }
 
   deleteItem(bookId : number){

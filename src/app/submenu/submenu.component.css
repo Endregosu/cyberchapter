@@ -29,3 +29,11 @@
 #orangecart{
     color: #e95620;
 }
+#cartholder{
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+#cartholder:hover{
+    color: #e95620;
+}

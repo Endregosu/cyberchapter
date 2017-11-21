@@ -45,7 +45,6 @@ export class CartComponent implements OnInit {
   }
 
   deleteItem(id : number){
-    console.log(this.books);
     const index: number = this.books.indexOf(id);
     if (index !== -1) {
         this.books.splice(index, 1);
@@ -53,15 +52,20 @@ export class CartComponent implements OnInit {
   }
 
   toProducts() {
-    this.router.navigate(['./products']);
+    this.router.navigate(['.  /products']);
   }
 
   checkout(){
     console.log(this.user.getUserLoggedIn());
-      if(this.user.getUserLoggedIn){
+      if(!this.user.getUserLoggedIn()){
         alert("Haver... nem is vagy bejelentkezve");
       } else {
         alert("Küldöm a cuccot!");
+        // Send the data to the backend
+
+        this.books = [];
+        this.sumvalue = 0;
+        this.cartservice.setNumberOfItems(0);
       }
   }
 

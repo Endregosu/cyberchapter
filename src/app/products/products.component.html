@@ -1,4 +1,11 @@
+
 <div class="container products-list">
+    <div class="form-group">
+            <h3 id="searchtitle">Keressen termékeink között:</h3>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Könyv neve..." #search  (keyup)="0"/>
+            </div>
+    </div>
     <ul>
         <div class="row">
             <li class="" *ngFor="let item of cart">
@@ -9,12 +16,13 @@
   <ul>
     <div class="row">
 
-        <li class="bookItem col-md-3" *ngFor="let book of books" (click)="addToCart(book)">
-            <img class="coverphoto" src={{book.image}} /> 
-            <h2>{{ book.title }}</h2>
+        <li class="bookItem col-md-3" *ngFor="let book of (books | namesearch: search.value )">
+            <img class="coverphoto" src={{book.image}} (click)="addToCart(book)"/> 
+            <h2 class="booktitle" (click)="goToSingleProduct(book.id)">{{ book.title }}</h2>
             <h3>{{ book.description }}</h3>
             <p class="price"> {{ book.price | forint }}</p>
         </li>
     </div>
   </ul>
 </div>
+

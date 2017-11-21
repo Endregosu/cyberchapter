@@ -16,7 +16,6 @@ export class LoginPageComponent implements OnInit {
   ngOnInit() {
     this.user.getRegisteredUsers()
       .subscribe(resUsersData => this.users = resUsersData);
-      console.log(this.users);
   }
 
   public loginUser(e){

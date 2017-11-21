@@ -1,3 +1,15 @@
 .container.h1{
     color: red !important;
 }
+
+#contains{
+    font-size: 20px;
+}
+#contains li{
+    margin: 2% 0;
+    display: block;
+}
+
+.appdescription{
+    font-size: 20px;
+}

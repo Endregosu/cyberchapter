@@ -6,6 +6,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { LoginPageComponent } from 'app/login-page/login-page.component';
 import { MainComponent } from 'app/main/main.component';
+import { SingleProductComponent } from 'app/singleproduct/singleproduct.component';
 
 
 export const router: Routes = [
@@ -14,8 +15,10 @@ export const router: Routes = [
     { path: 'main', component: MainComponent },
     { path: 'products', component:  ProductsComponent },
     { path: 'loginpage', component: LoginPageComponent },
-    { path: 'cart', component: CartComponent },
- 
+    {
+        path: 'singleproduct/:id',
+        component: SingleProductComponent
+    }, 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];

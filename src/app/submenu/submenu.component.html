@@ -5,9 +5,9 @@
     <h5 id="user" *ngIf=this.user.getUserLoggedIn()>Bejelentkezve mint : {{ this.user.getUserName() }}</h5>
     <h5 id="user" *ngIf=!(this.user.getUserLoggedIn())>Még nem jelentkeztél be</h5>
 
-    <a href="/cart">
+    <span routerLink="cart" id="cartholder">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
       <h5 id="itemsCount">( <span id="orangecart">{{ this.cart.getNumberOfItems() }}</span> )</h5>
-    </a>
+    </span>
   </div>
 </div>

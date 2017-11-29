@@ -30,6 +30,7 @@ export class CartComponent implements OnInit {
   }
 
   ngDoCheck(){
+    this.bookListWithDetails = [];
     const change = this.differ.diff(this.books);
       for(let book of this.books){
         for (var i = 0; i < this.booksInShop.length; i++) {
@@ -39,6 +40,7 @@ export class CartComponent implements OnInit {
       }
       
       //Sumvalue számolás
+      this.sumvalue = 0;
       for(let item of this.bookListWithDetails){
         this.sumvalue += item.price;
       }
@@ -49,6 +51,8 @@ export class CartComponent implements OnInit {
     if (index !== -1) {
         this.books.splice(index, 1);
     }    
+    let items = this.cartservice.getNumberOfItems();
+    this.cartservice.setNumberOfItems(items-1);
   }
 
   toProducts() {
@@ -66,6 +70,7 @@ export class CartComponent implements OnInit {
         this.books = [];
         this.sumvalue = 0;
         this.cartservice.setNumberOfItems(0);
+        this.bookListWithDetails = [];
       }
   }
 
